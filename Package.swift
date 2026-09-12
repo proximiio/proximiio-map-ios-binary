@@ -80,7 +80,7 @@ let package = Package(
         // stability is a property of the FORMAT, not a promise about the API,
         // and the SDK is `6.0.0-beta.x`, where a beta bump is explicitly free
         // to move public API. SwiftPM range semantics make that worse, not
-        // better: `upToNextMinor(from: "6.0.0-beta.32")` admits every later
+        // better: `upToNextMinor(from: "6.0.0-beta.33")` admits every later
         // 6.0.0 prerelease, which is precisely the set of versions with no
         // compatibility promise attached.
         //
@@ -88,8 +88,8 @@ let package = Package(
         // `.swiftinterface` names types by their DEFINING module —
         // `ProximiioBinary.<T>` — and a consumer's compiler rebuilds that text
         // against whatever SDK the graph resolved. A renamed or removed type
-        // in beta.33 is not a deprecation warning here, it is a consumer whose
-        // build cannot reconstruct this module at all. `exact:` is the only
+        // in a later beta is not a deprecation warning here, it is a consumer
+        // whose build cannot reconstruct this module at all. `exact:` is the only
         // requirement that guarantees the graph contains the bytes this binary
         // was compiled against.
         //
@@ -99,14 +99,14 @@ let package = Package(
         // docs/RELEASING.md, "How the map's version relates to the SDK's".
         .package(
             url: "https://github.com/proximiio/proximiio-sdk-ios-binary",
-            exact: "6.0.0-beta.32"
+            exact: "6.0.0-beta.33"
         ),
     ],
     targets: [
         .binaryTarget(
             name: "ProximiioMapBinary",
-            url: "https://github.com/proximiio/proximiio-map-ios-binary/releases/download/6.0.0-beta.1/ProximiioMapBinary.xcframework.zip",
-            checksum: "380bb807a154ee700a7aaffe9433fa7def747c7f8ead15678a9864543555bb06"
+            url: "https://github.com/proximiio/proximiio-map-ios-binary/releases/download/6.0.0-beta.2/ProximiioMapBinary.xcframework.zip",
+            checksum: "b1248afa95f03c12a9b56b2cf8e8b24f44023b1173170f25eee5157468a4265c"
         ),
         // ── the source shim ──────────────────────────────────────────────
         // One line of `@_exported import ProximiioMapBinary`, so customers
