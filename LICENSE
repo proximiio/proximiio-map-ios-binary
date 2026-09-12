@@ -1,0 +1,436 @@
+Proximi.io iOS map — Software Licence Agreement
+
+═══════════════════════════════════════════════════════════════════════════════
+DRAFT — PENDING LEGAL REVIEW. NOT YET THE OPERATIVE LICENCE.
+
+This text was drafted to be reviewed, not to be relied on. It has not been read
+by a lawyer. Before it is published in place of the previous placeholder,
+somebody with authority has to settle the decisions listed under "Open decisions"
+at the end of this file, and then delete this banner and that section. Until
+then, the licence that actually governs your use of the map is the separate
+written agreement between you and Proximi.io — see clause 7.
+
+This file is deliberately near-identical to the licence shipped with the
+Proximi.io iOS SDK (github.com/proximiio/proximiio-sdk-ios-binary). The two
+products are licensed on the same terms. Clauses 1, 6.3 and 8 differ, because
+what the map is and what it brings with it differ; everywhere else the wording
+is the same on purpose, and a change to one file should be made to both.
+═══════════════════════════════════════════════════════════════════════════════
+
+Copyright (c) 2026 Proximi.io. All rights reserved.
+
+
+1. WHAT THIS DOCUMENT COVERS
+
+1.1  "Map" means the precompiled Proximi.io iOS map package distributed from
+     this repository: the `ProximiioMapBinary.xcframework` attached to each
+     release, the package manifest, the one-line source shim, and the
+     accompanying documentation. It does not mean the map's source code, which
+     is not published.
+
+1.2  The Map is not self-contained. Adding it to a build also brings in the
+     Proximi.io iOS SDK and the MapLibre renderer, each at the exact version
+     this release was compiled against. The SDK is Proximi.io software under
+     its own copy of this licence (clause 6.3); MapLibre is third-party
+     software under its own licence (clause 8.1).
+
+1.3  "You" means the legal entity exercising the rights below, and every entity
+     that entity controls.
+
+1.4  The Map is licensed, not sold. Proximi.io grants you the rights in
+     clause 2 and keeps everything else.
+
+
+2. LICENCE GRANT
+
+Subject to clauses 3, 7 and 11, Proximi.io grants you a non-exclusive,
+non-transferable, non-sublicensable, worldwide licence, for the term described
+in clause 11, to:
+
+2.1  download, install and store copies of the Map;
+
+2.2  integrate the Map into applications you develop ("your Applications") and
+     make copies of it as your build process requires;
+
+2.3  distribute the Map, in its compiled form, embedded inside your
+     Applications — through the Apple App Store, TestFlight, Apple Business
+     Manager, an enterprise distribution programme, or any equivalent channel —
+     to end users of those Applications; and
+
+2.4  use the Map internally for development, testing and support of your
+     Applications.
+
+2.5  No licence to end users. Your end users receive the Map only as an
+     inseparable part of your Application. They get no rights in the Map of
+     their own, and your Application's own end-user terms must not purport to
+     grant them any.
+
+
+3. WHAT THE LICENCE DOES NOT ALLOW
+
+Except where a mandatory law gives you a right that cannot be contracted away
+(and then only to the extent of that right), you must not, and must not permit
+anyone else to:
+
+3.1  reverse engineer, decompile, disassemble, or otherwise attempt to derive
+     the source code, algorithms or internal design of the Map, whether by
+     static analysis of the binary, instrumentation of it at runtime, or any
+     other means;
+
+3.2  extract, isolate, re-link or repackage any part of the Map so that it can
+     be used outside one of your Applications — including lifting the
+     xcframework, or any object code, symbol or resource out of it, into
+     another library, framework, package, container or service;
+
+3.3  distribute, publish, sublicense, sell, rent, lease, lend or otherwise make
+     the Map available as a library, SDK, package, component or hosted service,
+     whether on its own or bundled with other software. Clause 2.3 is the only
+     redistribution this licence permits: inside your Application, as part of
+     its compiled product;
+
+3.4  use the Map, or anything you learn from it, to build, train, improve or
+     operate a product that competes with the Map, the Proximi.io iOS SDK, or
+     the Proximi.io platform — including an indoor positioning, indoor
+     wayfinding, or venue mapping SDK or service;
+
+3.5  remove, obscure or alter any copyright notice, licence text, attribution,
+     product identifier or code signature in the Map or in the third-party
+     components it brings with it. This includes the on-map attribution control
+     described in clause 8.3;
+
+3.6  circumvent or disable any licence check, token validation, quota or usage
+     measurement in the Map or in the Proximi.io services it talks to, or use
+     the Map with credentials you are not entitled to use; or
+
+3.7  represent the Map, or the venue rendering it produces, as your own
+     technology in a way that misstates its origin.
+
+3.8  Clause 3 restricts the Proximi.io portions of this distribution only. It
+     does not restrict anything MapLibre's own licence permits you to do with
+     MapLibre (clause 8.1).
+
+
+4. THE PUBLIC REPOSITORY IS NOT A PUBLIC LICENCE
+
+4.1  This repository is public so that Swift Package Manager can resolve it
+     without credentials. That is a mechanical necessity of how Swift Package
+     Manager fetches packages, not an offer of open-source terms.
+
+4.2  Being able to read the repository, clone it, or download a release asset
+     gives you no licence to use the Map. The rights in clause 2 exist only
+     while you hold a valid Proximi.io commercial agreement (clause 7). Absent
+     that agreement, any use beyond evaluating whether to enter into one is
+     unlicensed.
+
+4.3  The Map is not open source, and nothing about the repository's visibility
+     makes it so. No open-source licence — permissive or copyleft — applies to
+     the Proximi.io portions of this distribution. MapLibre, which does carry
+     an open-source licence, is a component this package depends on; its
+     licence applies to it and not to the Map. Do not read MapLibre's BSD
+     licence as covering anything in `ProximiioMapBinary.xcframework`.
+
+
+5. OWNERSHIP
+
+5.1  Proximi.io and its licensors own the Map and every intellectual property
+     right in it, including the rendering, styling and route-drawing methods it
+     implements. Nothing in this licence transfers any of that to you.
+
+5.2  You own your Applications and everything you write. Integrating the Map
+     gives Proximi.io no rights in your code.
+
+5.3  This licence grants no trademark rights. You may state factually that your
+     Application uses Proximi.io technology; any other use of Proximi.io's
+     names or logos needs written permission. MapLibre's and MapTiler's marks
+     are theirs, not Proximi.io's to license.
+
+5.4  If you send Proximi.io feedback, bug reports or suggestions, Proximi.io may
+     use them without obligation to you. This does not give Proximi.io any
+     licence to your Applications or to your data.
+
+
+6. THE MAP NEEDS A PROXIMI.IO ACCOUNT, AND IT NEEDS THE SDK
+
+6.1  The Map does nothing useful on its own. It requires a Proximi.io account
+     and a valid token, and it works against Proximi.io services whose terms,
+     availability and pricing are set in your commercial agreement, not here.
+
+6.2  This licence does not entitle you to those services, to any service level,
+     to support, or to any future release of the Map. Those come from the
+     commercial agreement, if it provides them.
+
+6.3  The Proximi.io iOS SDK arrives with the Map and is licensed to you under
+     the licence shipped with the SDK's own distribution, not under this file.
+     The two texts are written to say the same thing, but if they ever differ,
+     the SDK's licence governs the SDK and this one governs the Map.
+
+
+7. RELATIONSHIP TO YOUR COMMERCIAL AGREEMENT
+
+7.1  This file states the terms on which the binary Map may be used. Your
+     separate written commercial agreement with Proximi.io — subscription
+     agreement, master services agreement, order form, or equivalent — states
+     the commercial relationship: fees, term, service levels, data processing,
+     support, and the like.
+
+7.2  Where the two conflict, the commercial agreement prevails, and this file
+     is read as narrowed or widened to match it. If your commercial agreement
+     grants you rights this file does not, you have those rights. If it imposes
+     restrictions this file does not, those restrictions apply.
+
+7.3  If you have no commercial agreement with Proximi.io, this file governs on
+     its own, and clause 4.2 applies: you have no licence to use the Map in
+     production.
+
+7.4  This file is not an entire-agreement clause and does not replace anything
+     you have already signed.
+
+
+8. THIRD-PARTY COMPONENTS
+
+The Map brings third-party software with it. Those components are licensed to
+you by their own licensors under their own terms, not by Proximi.io under this
+licence. Clause 9's disclaimer and clause 10's liability limits apply to them
+as they reach you through the Map.
+
+The full notices are in the two files published beside this one:
+`ThirdParty-MapLibre-LICENSE.txt` and `NOTICES.md`. Both must travel with any
+Application that ships this package. This clause summarises what they require;
+they are the operative text.
+
+8.1  MapLibre Native — BSD 2-Clause licence.
+
+     Version: the one pinned `exact:` in this release's `Package.swift`
+     (6.29.0 at the time this draft was written).
+     Copyright (c) 2021 MapLibre contributors; (c) 2018-2021 MapTiler.com;
+     (c) 2014-2020 Mapbox.
+
+     MapLibre is not compiled into `ProximiioMapBinary.xcframework`. Your
+     package manager resolves it as a separate binary target, and your build
+     embeds and signs `MapLibre.framework` into your Application. Your
+     Application therefore distributes MapLibre in binary form.
+
+     What you must do: the BSD 2-Clause licence requires that a binary
+     redistribution reproduce MapLibre's copyright notice, the list of
+     conditions, and the disclaimer "in the documentation and/or other
+     materials provided with the distribution". In an iOS app that means a
+     legal, licences or acknowledgements screen, or equivalent in-app or
+     accompanying documentation. Reproduce the full text of
+     `ThirdParty-MapLibre-LICENSE.txt` there. Shipping without it is a licence
+     violation by your Application, and Proximi.io cannot cure it for you — we
+     can only hand you the text.
+
+     The Mapbox copyright line is part of the required notice: MapLibre Native
+     descends from Mapbox GL Native as it stood before Mapbox's licence change.
+
+8.2  The Proximi.io iOS SDK, and GRDB.swift through it — MIT licence.
+
+     The SDK is Proximi.io software (clause 6.3) and carries no separate
+     third-party obligation of its own, but it embeds GRDB.swift
+     (github.com/groue/GRDB.swift), which is MIT-licensed, © 2015-2025 Gwendal
+     Roué. Every Application that ships this package also ships GRDB. The MIT
+     licence requires its copyright notice and permission notice to be included
+     with every copy; the full text is in `NOTICES.md` and in the SDK's own
+     licence file. Put it on the same screen as the MapLibre notice.
+
+8.3  On-map attribution is a separate obligation, and it is not the same one.
+
+     The Map shows MapLibre's attribution control (the ⓘ) by default, and
+     `MapCanvasConfiguration` lets you move, tint and re-label it. Leave it
+     visible.
+
+     That control attributes the map *data* — OpenStreetMap and whichever tile
+     or style provider your venue uses — and satisfies those providers' terms.
+     It does not satisfy MapLibre's software licence, which asks for the
+     copyright notice, conditions and disclaimer in your documentation or
+     accompanying materials, not a link in the corner of a view. You need both:
+     the attribution control and the notice screen in clause 8.1.
+
+     Map data and tile terms are between you and whoever serves your tiles.
+     Proximi.io does not license OpenStreetMap data to you.
+
+8.4  SQLite — no obligation on you.
+
+     The Map links SQLite through Apple's system library,
+     `/usr/lib/libsqlite3.dylib`. Proximi.io does not distribute SQLite to you;
+     Apple does, as part of iOS. Your use of it is covered by your Apple
+     developer agreements. SQLite itself is in the public domain and asks for
+     no attribution.
+
+8.5  Nothing else ships. Apart from MapLibre, the SDK and GRDB above, the Map
+     binary declares no dynamic dependency other than the Apple system
+     frameworks and `libsqlite3.dylib`, and embeds no other third-party code.
+
+8.6  If a future release changes this list, `NOTICES.md` shipped with that
+     release states the change. Check the files that came with the version you
+     ship — in particular the MapLibre version, which is pinned exactly and
+     moves between releases.
+
+
+9. NO WARRANTY
+
+9.1  THE MAP IS PROVIDED "AS IS" AND "AS AVAILABLE", WITHOUT WARRANTY OF ANY
+     KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED
+     WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE AND
+     NON-INFRINGEMENT.
+
+9.2  Proximi.io does not warrant that the Map will be uninterrupted or
+     error-free, or that any position, floor, geofence event, route or rendered
+     geometry it presents will be accurate. Indoor positioning is an estimate
+     derived from radio and inertial signals, and venue geometry is only as
+     current as the data published for that venue — things that depend on the
+     venue, the hardware, the installation and the environment, and are outside
+     Proximi.io's control.
+
+9.3  You must not use the Map as the sole means of determining position or of
+     guiding a person where an error could cause death, personal injury, or
+     serious physical or environmental damage. It is not designed, tested or
+     certified for navigation of vehicles or aircraft, for medical use, for
+     emergency egress or emergency response dispatch, or for any other
+     safety-critical purpose.
+
+9.4  Clause 9 is capitalised because several jurisdictions require a warranty
+     disclaimer to be conspicuous for it to take effect. It does not exclude a
+     warranty that a mandatory consumer or commercial law gives you and does
+     not permit to be excluded.
+
+
+10. LIABILITY
+
+10.1 Proximi.io is not liable for indirect, incidental, special, consequential
+     or punitive damages, nor for lost profits, lost revenue, lost data, or
+     business interruption, arising out of or relating to the Map, however
+     caused and on any theory of liability, even if Proximi.io has been advised
+     that such damage is possible.
+
+10.2 Proximi.io's total aggregate liability arising out of or relating to the
+     Map and this licence is capped at the amount you paid Proximi.io under
+     your commercial agreement in the twelve months before the event giving
+     rise to the claim. [CAP — TO BE CONFIRMED: see Open decisions, item 3.]
+
+10.3 Nothing in this licence excludes or limits liability that cannot lawfully
+     be excluded or limited, including liability for death or personal injury
+     caused by negligence, and for fraud or fraudulent misrepresentation.
+
+10.4 You are responsible for your Applications: for what they do with the
+     positions and geometry the Map presents, for the permissions they ask of
+     their users, for surfacing the third-party notices in clause 8, and for
+     their compliance with applicable law, Apple's App Store rules, and data
+     protection law. You will defend and indemnify Proximi.io against
+     third-party claims arising from your Applications, except to the extent
+     the claim is caused by the Map itself.
+
+
+11. TERM AND TERMINATION
+
+11.1 This licence starts when you first download or use the Map and runs for as
+     long as your commercial agreement with Proximi.io is in force.
+
+11.2 It terminates automatically if your commercial agreement terminates or
+     expires. Proximi.io may also terminate it on written notice if you breach
+     clause 3 or clause 4 and, where the breach can be cured, do not cure it
+     within 30 days of notice.
+
+11.3 On termination you must stop using the Map in development, stop shipping
+     new versions of your Applications that contain it, and delete the copies
+     you hold. Proximi.io will not require you to recall or remotely disable
+     copies already installed on end users' devices; those copies may remain in
+     place, and clauses 3, 5, 8, 9, 10 and 12 keep applying to them.
+     Termination of this licence does not terminate your MapLibre rights, which
+     come from MapLibre's own licence and are not Proximi.io's to withdraw.
+
+11.4 Clauses 3, 4.2, 5, 8, 9, 10, 11.3 and 12 survive termination.
+
+
+12. GOVERNING LAW AND DISPUTES
+
+12.1 This licence is governed by the laws of [GOVERNING LAW — TO BE DECIDED,
+     see Open decisions, item 2], excluding its conflict-of-law rules and
+     excluding the UN Convention on Contracts for the International Sale of
+     Goods.
+
+12.2 The courts of [FORUM — TO BE DECIDED, see Open decisions, item 2] have
+     exclusive jurisdiction, except that either party may seek injunctive
+     relief for infringement of intellectual property rights in any competent
+     court.
+
+12.3 If your commercial agreement names a governing law or forum, that one
+     applies instead, per clause 7.2.
+
+
+13. GENERAL
+
+13.1 You may not assign this licence without Proximi.io's written consent,
+     except to a successor of your whole business, on written notice.
+
+13.2 If a clause is held unenforceable, it is narrowed to the minimum extent
+     that makes it enforceable, or struck if it cannot be; the rest stands.
+
+13.3 A delay in enforcing a term is not a waiver of it.
+
+13.4 Proximi.io may publish revised licence terms with a future release. The
+     terms shipped in the release you use govern that release; they do not
+     change retroactively for releases you already shipped.
+
+13.5 Questions about this licence: support@proximi.io.
+
+
+═══════════════════════════════════════════════════════════════════════════════
+OPEN DECISIONS — resolve before publishing, then delete this section
+
+These are the same decisions as in the SDK's licence, plus items 9 and 10 which
+are specific to the map. Decide them once and apply to both files.
+
+1. LEGAL ENTITY. "Proximi.io" is used throughout as the licensor. Replace it
+   with the registered company name, company number and registered address of
+   the entity that actually owns the software and contracts with customers. A
+   licence granted by a brand name rather than a legal person is weak.
+
+2. GOVERNING LAW AND FORUM (clause 12). Not decided, and deliberately not
+   guessed. Must match the SDK's licence.
+
+3. LIABILITY CAP (clause 10.2). "Fees paid in the preceding twelve months" is a
+   placeholder figure, not a decision anyone has made. Must match the SDK's,
+   and must be compatible with the cap in the standard commercial agreement,
+   since clause 7.2 makes that one prevail.
+
+4. WARRANTY POSTURE (clause 9). Drafted as a full "as is" disclaimer. Clause
+   9.3's safety-critical exclusion is worth a careful read for the map in
+   particular, because customers use it for wayfinding in public venues, and
+   "emergency egress" is an obvious thing for a venue operator to want.
+
+5. THIRD-PARTY NOTICES (clause 8). This side is in reasonable shape: the
+   release pipeline already copies `NOTICES.md` and
+   `ThirdParty-MapLibre-LICENSE.txt` into this repository beside the licence.
+   The SDK's side is not — see docs/licensing-notes.md in the SDK repository.
+   Confirm the two products should stay asymmetric or should be made to match.
+
+6. TERMINATION AND SHIPPED APPS (clause 11.3). The draft says end users keep
+   working copies after termination. Confirm that customer-friendly reading is
+   intended, and that it does not conflict with the token shutoff the
+   commercial agreement presumably allows.
+
+7. CLAUSE 3.4 (COMPETING USE). Drafted broadly. Broad non-compete language in a
+   licence can be unenforceable in some jurisdictions and can scare off
+   customers who build adjacent products. Decide how wide it should really be.
+
+8. WHETHER ONE LICENCE FILE SHOULD COVER BOTH PRODUCTS. Right now there are two
+   near-identical files that must be kept in sync by hand, which they will not
+   be. An alternative is one Proximi.io Mobile SDK licence, referenced by both
+   distributions, with a per-product third-party annex. That is a commercial
+   decision, not a drafting one.
+
+9. MAP DATA AND TILE TERMS (clause 8.3). The draft says map data terms are
+   between the customer and their tile provider, and that Proximi.io does not
+   license OpenStreetMap data. Confirm that is true of every delivery model —
+   if Proximi.io ever serves or proxies tiles, or ships offline tile packages
+   with venue data, that sentence is wrong and the obligation shifts.
+
+10. MAPLIBRE VERSION IN THE TEXT (clause 8.1). The version is named as "6.29.0
+    at the time this draft was written" and otherwise points at
+    `Package.swift`. The licence file is copied verbatim by the release script
+    and is NOT templated, so a hard version number here will go stale silently.
+    Either keep the soft phrasing, or decide to template it — which would need
+    a change to scripts/publish-binary-release.sh that was deliberately not
+    made here.
+═══════════════════════════════════════════════════════════════════════════════
