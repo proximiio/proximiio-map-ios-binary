@@ -80,7 +80,7 @@ let package = Package(
         // stability is a property of the FORMAT, not a promise about the API,
         // and the SDK is `6.0.0-beta.x`, where a beta bump is explicitly free
         // to move public API. SwiftPM range semantics make that worse, not
-        // better: `upToNextMinor(from: "6.0.0-beta.34")` admits every later
+        // better: `upToNextMinor(from: "6.0.0-beta.35")` admits every later
         // 6.0.0 prerelease, which is precisely the set of versions with no
         // compatibility promise attached.
         //
@@ -99,14 +99,14 @@ let package = Package(
         // docs/RELEASING.md, "How the map's version relates to the SDK's".
         .package(
             url: "https://github.com/proximiio/proximiio-sdk-ios-binary",
-            exact: "6.0.0-beta.34"
+            exact: "6.0.0-beta.35"
         ),
     ],
     targets: [
         .binaryTarget(
             name: "ProximiioMapBinary",
-            url: "https://github.com/proximiio/proximiio-map-ios-binary/releases/download/6.0.0-beta.5/ProximiioMapBinary.xcframework.zip",
-            checksum: "bb353fff887afbaf064a9a2b52a6ecdfca2282a71a37e3f6bfe2e36691d90d91"
+            url: "https://github.com/proximiio/proximiio-map-ios-binary/releases/download/6.0.0-beta.6/ProximiioMapBinary.xcframework.zip",
+            checksum: "4b1a6a61491b67c47cf14952b5f6bcd6d9bb9405fbb03c1fe325fb77f9ade277"
         ),
         // ── the source shim ──────────────────────────────────────────────
         // One line of `@_exported import ProximiioMapBinary`, so customers
