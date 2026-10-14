@@ -99,14 +99,14 @@ let package = Package(
         // docs/RELEASING.md, "How the map's version relates to the SDK's".
         .package(
             url: "https://github.com/proximiio/proximiio-sdk-ios-binary",
-            exact: "6.0.0-beta.57"
+            exact: "6.0.0-beta.58"
         ),
     ],
     targets: [
         .binaryTarget(
             name: "ProximiioMapBinary",
-            url: "https://github.com/proximiio/proximiio-map-ios-binary/releases/download/6.0.0-beta.42/ProximiioMapBinary.xcframework.zip",
-            checksum: "4c35b960f4a0db91b7306a1820c4588169650c76aa3745f948217c24032ff738"
+            url: "https://github.com/proximiio/proximiio-map-ios-binary/releases/download/6.0.0-beta.43/ProximiioMapBinary.xcframework.zip",
+            checksum: "acb1693dbc03de3d4c5cd746b230f669e9c8f86006586fd2273439d7c0c5b79f"
         ),
         // ── the source shim ──────────────────────────────────────────────
         // One line of `@_exported import ProximiioMapBinary`, so customers
