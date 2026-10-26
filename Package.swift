@@ -105,8 +105,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "ProximiioMapBinary",
-            url: "https://github.com/proximiio/proximiio-map-ios-binary/releases/download/6.0.0-beta.51/ProximiioMapBinary.xcframework.zip",
-            checksum: "679c7945ad53b05d9e681088a4be2939b18b0e0e439f1ec477f3a85e63932a74"
+            url: "https://github.com/proximiio/proximiio-map-ios-binary/releases/download/6.0.0-beta.52/ProximiioMapBinary.xcframework.zip",
+            checksum: "2d88ce939583fdd7a8a8490d0936339f97c4e8d40da480b07fc839666371b9ee"
         ),
         // ── the source shim ──────────────────────────────────────────────
         // One line of `@_exported import ProximiioMapBinary`, so customers
@@ -122,19 +122,23 @@ let package = Package(
         // containing `import GRDB` and became unconsumable via the SwiftPM CLI
         // with `missing required module 'GRDBSQLite'`, because `-Xcc` flags do
         // not reach the interface-rebuild sub-invocation. Here the interface
-        // imports MapLibre, Proximiio and ProximiioCore, and all three are
-        // listed below on purpose:
+        // imports MapLibre and Proximiio, and both are listed below on
+        // purpose:
         //
         //   MapLibre       — a binary framework. Reached via a Swift framework
         //                    search path (`-F`), which IS inherited by the
         //                    interface-rebuild sub-invocation, unlike `-Xcc`.
         //                    This is why MapLibre is not a second GRDBSQLite.
         //   Proximiio      — the SDK umbrella; the map's live binding imports it.
-        //   ProximiioCore  — the map's Core imports it directly. Dropping it
-        //                    here because "Proximiio re-exports it anyway"
-        //                    breaks the interface rebuild: the customer's
-        //                    compiler must resolve the module NAMED on the
-        //                    import line, not an equivalent surface.
+        //   ProximiioCore  — no longer imported by the interface from
+        //                    6.0.0-beta.52: build-xcframeworks.sh rewrites the
+        //                    map's `import ProximiioCore` to `import Proximiio`,
+        //                    because the SDK's CocoaPods pod vends no
+        //                    `ProximiioCore` module. Kept as a dependency so an
+        //                    app that imports it itself still resolves it. The
+        //                    rule stands: the customer's compiler must resolve
+        //                    the module NAMED on the import line, not an
+        //                    equivalent surface.
         //
         // scripts/build-map-xcframework.sh records the interface's imports in
         // manifest.json and scripts/verify-binary-release.sh asserts every one
