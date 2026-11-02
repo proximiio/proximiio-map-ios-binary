@@ -105,8 +105,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "ProximiioMapBinary",
-            url: "https://github.com/proximiio/proximiio-map-ios-binary/releases/download/6.0.0-beta.60/ProximiioMapBinary.xcframework.zip",
-            checksum: "6332a67a60fa3e32668cae53a32a66ee18eca46b36bf93d574fbf412f54cc1ec"
+            url: "https://github.com/proximiio/proximiio-map-ios-binary/releases/download/6.0.0-beta.61/ProximiioMapBinary.xcframework.zip",
+            checksum: "529cd8968d8dcc5b9093621f8ee66d71ae7566a0bd700b007fff30d45caf4ecb"
         ),
         // ── the source shim ──────────────────────────────────────────────
         // One line of `@_exported import ProximiioMapBinary`, so customers
