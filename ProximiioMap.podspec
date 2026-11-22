@@ -29,7 +29,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ProximiioMap'
-  s.version          = '6.0.0-beta.67'
+  s.version          = '6.0.0-beta.68'
   s.summary          = 'Proximi.io iOS Map — the indoor map, blue dot, routes and journeys over MapLibre.'
   s.description      = <<-DESC
     Precompiled binary distribution of the Proximi.io iOS Map: the venue map over
@@ -59,7 +59,7 @@ Pod::Spec.new do |s|
   s.cocoapods_version = '>= 1.10.0'
 
   # The SAME SHA-256 SwiftPM pins (`swift package compute-checksum`).
-  s.source           = { :http => 'https://github.com/proximiio/proximiio-map-ios-binary/releases/download/6.0.0-beta.67/ProximiioMapBinary.xcframework.zip', :sha256 => '9a5e40192b98fd8c7185e8d041957717f31e72a7e2f44328c0b2021ec5ef5760' }
+  s.source           = { :http => 'https://github.com/proximiio/proximiio-map-ios-binary/releases/download/6.0.0-beta.68/ProximiioMapBinary.xcframework.zip', :sha256 => '331d81ef544e45f497fa36f56438912d8abbf8c083e2b5b1ac62b6647334628d' }
 
   s.vendored_frameworks = 'ProximiioMapBinary.xcframework'
 
@@ -76,6 +76,6 @@ Pod::Spec.new do |s|
 
   # Exactly the versions the binary was built against: a `.swiftinterface`
   # names SDK types by their defining module, and a MapLibre minor is an ABI.
-  s.dependency 'Proximiio', '6.0.0-beta.74'
+  s.dependency 'Proximiio', '6.0.0-beta.75'
   s.dependency 'MapLibre', '6.29.0'
 end
